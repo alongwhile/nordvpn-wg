@@ -228,9 +228,9 @@ These were lifted from LSIO's wireguard instructions and are labelled as "unsupp
 6. Recreate your wireguard container:
 ```docker-compose up -d --force-recreate```
 
-Now your stack should launch nordlynx first, followed by anything else that it depends on.  This configuration will have all your containers in the stack use the same local IP address and the same network.  They can now talk to each other using "localhost:port" and you can reach the containers from other machines on your local network using (example) http://host-local-ip:port 
+Now your stack should launch nordlynx first, followed by anything else that depend on it.  This configuration will have all your containers in the stack use the same local IP address and the same network.  They can now talk to each other using "localhost:port" (or 127.0.0.1:port) and you can reach the containers from other machines on your local network using (example) http://host-local-ip:port 
 
-Here's an example of my current docker stack: nordvpn-qbittorrent-sonarr-radarr-prowlarr-bazaar
+Soon i'm going to upload an example of my current docker stack: nordvpn-qbittorrent-sonarr-radarr-prowlarr-bazaar, forked from the pjortiz stack linked below.  
 
 ## Acknowledgements
 
@@ -240,4 +240,4 @@ Also thanks to bubuntux whose original <a href="https://github.com/bubuntux/nord
 
 Thanks to Linuxserver.IO team for making great docker container images including the <a href="https://github.com/linuxserver/docker-wireguard">wireguard image</a> used here.
 
-And thanks to <a href="https://github.com/pjortiz/docker-arrs-with-nordvpn">pjortiz docker-arrs-with-nordvpn docker stack</a> which got me up and running with my working docker stack config.  I simply altered his stack and dropped in LSIO's wireguard instead of bubuntux's Nordlynx container.
+And thanks to <a href="https://github.com/pjortiz/docker-arrs-with-nordvpn">pjortiz docker-arrs-with-nordvpn</a> docker stack which got me up and running with my working docker stack config.  I simply altered his stack and dropped in LSIO's wireguard instead of bubuntux's Nordlynx container and made some slight adjustments.
